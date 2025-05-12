@@ -5,24 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookie Notification</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
         .card {
-            width: 300px;
-            height: 220px;
+            width: 400px;
+            height: 300px;
             background-color: rgb(255, 255, 255);
-            border-radius: 8px;
+            border-radius: 12px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 20px 30px;
-            gap: 13px;
+            padding: 30px;
+            gap: 20px;
             position: relative;
-            overflow: hidden;
-            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.062);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         #cookieSvg {
-            width: 50px;
+            width: 80px;
         }
 
         #cookieSvg g path {
@@ -30,26 +39,23 @@
         }
 
         .cookieHeading {
-            font-size: 1.2em;
+            font-size: 1.5em;
             font-weight: 800;
             color: rgb(26, 26, 26);
         }
 
         .cookieDescription {
-            text-align: center;
-            font-size: 0.7em;
+            font-size: 1em;
             font-weight: 600;
             color: rgb(99, 99, 99);
         }
 
         .cookieDescription a {
-            --tw-text-opacity: 1;
             color: rgb(59 130 246);
         }
 
         .cookieDescription a:hover {
-            -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+            text-decoration: underline;
         }
 
         .buttonContainer {
@@ -59,12 +65,12 @@
         }
 
         .acceptButton {
-            width: 80px;
-            height: 30px;
+            width: 120px;
+            height: 40px;
             background-color: #7b57ff;
             transition-duration: .2s;
             border: none;
-            color: rgb(241, 241, 241);
+            color: white;
             cursor: pointer;
             font-weight: 600;
             border-radius: 20px;
@@ -73,13 +79,13 @@
         }
 
         .declineButton {
-            width: 80px;
-            height: 30px;
+            width: 120px;
+            height: 40px;
             background-color: #dadada;
             transition-duration: .2s;
             color: rgb(46, 46, 46);
             border: none;
-            cursor: not-allowed;
+            cursor: pointer;
             font-weight: 600;
             border-radius: 20px;
             box-shadow: 0 4px 6px -1px #bebdbd, 0 2px 4px -1px #bebdbd;
@@ -127,8 +133,8 @@
         <p class="cookieDescription">We use cookies to ensure that we give you the best experience on our website. <br><a href="#">Read cookies policies</a>.</p>
 
         <div class="buttonContainer">
-            <button class="acceptButton">Allow</button>
-            <button class="declineButton" disabled>Decline</button>
+            <button class="acceptButton" onclick="window.location.href='https://www.yourmaindomain.com';">Allow</button>
+            <button class="declineButton" onclick="window.location.href='https://www.yourmaindomain.com';">Decline</button>
         </div>
     </div>
 </body>
