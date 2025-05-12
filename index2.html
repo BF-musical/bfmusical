@@ -4,34 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Musical den 22. – Bagsværd Friskole</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>🎭 Musical den 22.</h1>
-    <p>Bagsværd Friskole inviterer til en uforglemmelig aften</p>
-    <a href="#info" class="btn">Læs mere</a>
+    <div class="overlay">
+      <h1>🎭 Musical den 22.</h1>
+      <p>Bagsværd Friskole inviterer til en magisk aften fuld af musik og teater</p>
+      <a href="#info" class="btn">Læs mere</a>
+    </div>
+    <div class="notes">
+      <span class="note" style="--i:1;">&#9835;</span>
+      <span class="note" style="--i:2;">&#9834;</span>
+      <span class="note" style="--i:3;">&#9835;</span>
+      <span class="note" style="--i:4;">&#9834;</span>
+      <span class="note" style="--i:5;">&#9835;</span>
+      <span class="note" style="--i:6;">&#9834;</span>
+      <span class="note" style="--i:7;">&#9835;</span>
+      <span class="note" style="--i:8;">&#9834;</span>
+      <span class="note" style="--i:9;">&#9835;</span>
+      <span class="note" style="--i:10;">&#9834;</span>
+    </div>
   </header>
 
   <section id="info">
     <h2>Om forestillingen</h2>
     <p>
-      Den 22. juni præsenterer eleverne på Bagsværd Friskole en storslået musical fyldt med musik, drama og glæde.
-      Kom og vær med til en magisk aften, hvor scenen bliver levende!
+      Den 22. juni præsenterer eleverne en uforglemmelig musical med sang, dans og drama. Publikum kan glæde sig til en aften fyldt med energi og talent!
     </p>
     <ul>
-      <li>📍 Sted: Skolens festsal</li>
-      <li>🕗 Tid: Kl. 19:00</li>
-      <li>🎟️ Entré: Gratis</li>
+      <li><strong>📍 Sted:</strong> Skolens festsal</li>
+      <li><strong>🕗 Tid:</strong> Kl. 19:00</li>
+      <li><strong>🎟️ Entré:</strong> Gratis</li>
     </ul>
   </section>
 
   <section id="gallery">
     <h2>Galleri</h2>
     <div class="gallery">
-      <img src="billede1.jpg" alt="Sceneprøve 1">
-      <img src="billede2.jpg" alt="Sceneprøve 2">
-      <img src="billede3.jpg" alt="Kulisserne">
+      <img src="billede1.jpg" alt="Sceneprøve">
+      <img src="billede2.jpg" alt="Bag scenen">
+      <img src="billede3.jpg" alt="Forestillingen">
+    </div>
+  </section>
+
+  <section id="social">
+    <h2>Følg os</h2>
+    <p>Hold dig opdateret på sociale medier:</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
     </div>
   </section>
 
@@ -40,3 +65,43 @@
   </footer>
 </body>
 </html>
+
+/* style.css */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background: #0f0f0f; color: #fff; }
+header { position: relative; height: 100vh; background: url('hero.jpg') no-repeat center/cover; display: flex; align-items: center; justify-content: center; }
+.overlay { background: rgba(0,0,0,0.6); padding: 2rem; border-radius: 20px; text-align: center; z-index: 1; }
+header h1 { font-size: 4rem; font-weight: 800; color: #ffcc00; text-shadow: 2px 2px 10px rgba(0,0,0,0.7); }
+header p { font-size: 1.2rem; margin: 1rem 0; }
+.btn { background: #ffcc00; color: #000; padding: 0.75rem 2rem; border-radius: 30px; font-weight: 600; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(255,204,0,0.6); }
+
+/* Floating notes */
+.notes { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
+.note { position: absolute; bottom: -10%; font-size: 1.5rem; color: rgba(255,204,0,0.8); animation: float 8s linear infinite; animation-delay: calc(-1s * var(--i)); left: calc(10% * var(--i)); }
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+}
+
+section { padding: 3rem 2rem; max-width: 900px; margin: auto; text-align: center; }
+h2 { color: #ffcc00; font-size: 2.5rem; margin-bottom: 1rem; }
+ul { list-style: none; }
+ul li { margin: 0.5rem 0; }
+
+.gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+.gallery img { width: 30%; border-radius: 15px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 0 10px rgba(255,255,255,0.1); }
+.gallery img:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(255,204,0,0.5); }
+
+.social-icons { margin-top: 1rem; }
+.social-icons a { color: #fff; font-size: 2rem; margin: 0 1rem; transition: transform 0.3s; }
+.social-icons a:hover { transform: scale(1.2); color: #ffcc00; }
+
+footer { text-align: center; background: #1a1a1a; padding: 2rem 1rem; font-size: 0.9rem; color: #aaa; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 { font-size: 2.5rem; }
+  .gallery img { width: 80%; }
+}
