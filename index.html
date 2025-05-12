@@ -3,39 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bagsværd Friskole Musical – "Drømmenes Land"</title>
-    <meta name="description" content="Bagsværd Friskoles årlige musical - 'Drømmenes Land'. Se forestillinger, billeder, og køb billetter online!" />
-    <meta name="author" content="Bagsværd Friskole" />
-
-    <!-- Open Graph / Social -->
-    <meta property="og:title" content="Bagsværd Friskole Musical – 'Drømmenes Land'" />
-    <meta property="og:description" content="Bagsværd Friskoles årlige musical - 'Drømmenes Land'. Se forestillinger, billeder, og køb billetter online!" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <!-- Favicon -->
+    <title>Drømmenes Land – Bagsværd Friskole Musical</title>
     <link rel="icon" href="./favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="./assets/index.css" />
+      body {
+        font-family: 'Raleway', sans-serif;
+        background: linear-gradient(to right, #fdfbfb, #ebedee);
+        color: #333;
+        line-height: 1.6;
+      }
 
-    <!-- JavaScript -->
-    <script type="module" src="./assets/index.js"></script>
+      header {
+        background: url('https://images.unsplash.com/photo-1601758123927-1964c55b2e1e') center/cover no-repeat;
+        height: 100vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+        backdrop-filter: blur(3px);
+      }
+
+      header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      header p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+      }
+
+      section {
+        padding: 4rem 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #007acc;
+      }
+
+      .cta {
+        background: #007acc;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s ease;
+        margin-top: 2rem;
+      }
+
+      .cta:hover {
+        background: #005f99;
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem;
+        background: #f4f4f4;
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 2.2rem;
+        }
+        header p {
+          font-size: 1rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="root">
-      <h1>Velkommen til Drømmenes Land 🎭</h1>
-      <img src="./placeholder.svg" alt="Musical Placeholder" style="max-width: 300px;" />
-      <p>Kom og oplev Bagsværd Friskoles årlige musical!</p>
-    </div>
-
-    <!-- GPT Engineer Script -->
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-  </body>
-</html>
+    <header>
+      <h1>Drømmenes Land</
