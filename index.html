@@ -1,216 +1,108 @@
 <!DOCTYPE html>
-<html lang="da">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Drømmenes Land – Bagsværd Friskole Musical</title>
-    <link rel="icon" href="./favicon.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Notification</title>
     <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        font-family: 'Raleway', sans-serif;
-        background: linear-gradient(to right, #fdfbfb, #ebedee);
-        color: #333;
-        line-height: 1.6;
-      }
-
-      /* Header with background image */
-      header {
-        background: url('https://images.unsplash.com/photo-1509228627152-72ae9ae6848c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-        height: 100vh;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 2rem;
-        backdrop-filter: blur(3px);
-      }
-
-      header h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-      }
-
-      header p {
-        font-size: 1.2rem;
-        max-width: 600px;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-      }
-
-      section {
-        padding: 4rem 2rem;
-        max-width: 1000px;
-        margin: auto;
-      }
-
-      section h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        color: #007acc;
-      }
-
-      .cta {
-        background: #007acc;
-        color: white;
-        padding: 1rem 2rem;
-        border-radius: 8px;
-        display: inline-block;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background 0.3s ease;
-        margin-top: 2rem;
-      }
-
-      .cta:hover {
-        background: #005f99;
-      }
-
-      footer {
-        text-align: center;
-        padding: 2rem;
-        background: #f4f4f4;
-        font-size: 0.9rem;
-        color: #666;
-      }
-
-      /* Cookie card styles */
-      .card {
-        width: 300px;
-        height: 220px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px 30px;
-        gap: 13px;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.062);
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 999;
-      }
-
-      #cookieSvg {
-        width: 50px;
-      }
-
-      #cookieSvg g path {
-        fill: rgb(97, 81, 81);
-      }
-
-      .cookieHeading {
-        font-size: 1.2em;
-        font-weight: 800;
-        color: rgb(26, 26, 26);
-      }
-
-      .cookieDescription {
-        text-align: center;
-        font-size: 0.7em;
-        font-weight: 600;
-        color: rgb(99, 99, 99);
-      }
-
-      .cookieDescription a {
-        color: rgb(59, 130, 246);
-      }
-
-      .cookieDescription a:hover {
-        text-decoration: underline;
-      }
-
-      .buttonContainer {
-        display: flex;
-        gap: 20px;
-        flex-direction: row;
-      }
-
-      .acceptButton {
-        width: 80px;
-        height: 30px;
-        background-color: #7b57ff;
-        transition-duration: .2s;
-        border: none;
-        color: rgb(241, 241, 241);
-        cursor: pointer;
-        font-weight: 600;
-        border-radius: 20px;
-        box-shadow: 0 4px 6px -1px #977ef3, 0 2px 4px -1px #977ef3;
-        transition: all .6s ease;
-      }
-
-      .declineButton {
-        width: 80px;
-        height: 30px;
-        background-color: #dadada;
-        transition-duration: .2s;
-        color: rgb(46, 46, 46);
-        border: none;
-        cursor: not-allowed;
-        font-weight: 600;
-        border-radius: 20px;
-        box-shadow: 0 4px 6px -1px #bebdbd, 0 2px 4px -1px #bebdbd;
-        transition: all .6s ease;
-      }
-
-      .declineButton:hover {
-        background-color: #ebebeb;
-        box-shadow: 0 10px 15px -3px #bebdbd, 0 4px 6px -2px #bebdbd;
-        transition-duration: .2s;
-      }
-
-      .acceptButton:hover {
-        background-color: #9173ff;
-        box-shadow: 0 10px 15px -3px #977ef3, 0 4px 6px -2px #977ef3;
-        transition-duration: .2s;
-      }
-
-      @media (max-width: 600px) {
-        header h1 {
-          font-size: 2.2rem;
+        .card {
+            width: 300px;
+            height: 220px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 30px;
+            gap: 13px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.062);
         }
-        header p {
-          font-size: 1rem;
+
+        #cookieSvg {
+            width: 50px;
         }
-      }
+
+        #cookieSvg g path {
+            fill: rgb(97, 81, 81);
+        }
+
+        .cookieHeading {
+            font-size: 1.2em;
+            font-weight: 800;
+            color: rgb(26, 26, 26);
+        }
+
+        .cookieDescription {
+            text-align: center;
+            font-size: 0.7em;
+            font-weight: 600;
+            color: rgb(99, 99, 99);
+        }
+
+        .cookieDescription a {
+            --tw-text-opacity: 1;
+            color: rgb(59 130 246);
+        }
+
+        .cookieDescription a:hover {
+            -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+        }
+
+        .buttonContainer {
+            display: flex;
+            gap: 20px;
+            flex-direction: row;
+        }
+
+        .acceptButton {
+            width: 80px;
+            height: 30px;
+            background-color: #7b57ff;
+            transition-duration: .2s;
+            border: none;
+            color: rgb(241, 241, 241);
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px -1px #977ef3, 0 2px 4px -1px #977ef3;
+            transition: all .6s ease;
+        }
+
+        .declineButton {
+            width: 80px;
+            height: 30px;
+            background-color: #dadada;
+            transition-duration: .2s;
+            color: rgb(46, 46, 46);
+            border: none;
+            cursor: not-allowed;
+            font-weight: 600;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px -1px #bebdbd, 0 2px 4px -1px #bebdbd;
+            transition: all .6s ease;
+        }
+
+        .declineButton:hover {
+            background-color: #ebebeb;
+            box-shadow: 0 10px 15px -3px #bebdbd, 0 4px 6px -2px #bebdbd;
+            transition-duration: .2s;
+        }
+
+        .acceptButton:hover {
+            background-color: #9173ff;
+            box-shadow: 0 10px 15px -3px #977ef3, 0 4px 6px -2px #977ef3;
+            transition-duration: .2s;
+        }
     </style>
-  </head>
-  <body>
-    <header>
-      <h1>Drømmenes Land</h1>
-      <p>En uforglemmelig musical skabt af eleverne på Bagsværd Friskole 🎶</p>
-      <a href="#billetter" class="cta">Køb Billetter</a>
-    </header>
-
-    <section id="om">
-      <h2>Om Forestillingen</h2>
-      <p>
-        “Drømmenes Land” er en original musical opført af skolens elever, med sang, dans og drama i centrum.
-        En fortælling om håb, fantasi og fællesskab – oplev hvordan unge stemmer og kreativitet kommer til live på scenen.
-      </p>
-    </section>
-
-    <section id="billetter">
-      <h2>Køb Billetter</h2>
-      <p>
-        Forestillingerne løber af stablen i marts 2025. Billetter kan reserveres online via vores billetportal.
-      </p>
-      <a href="https://example.com/billetter" class="cta" target="_blank">Reserver nu</a>
-    </section>
-
-    <!-- Cookie consent card -->
+</head>
+<body>
     <div class="card">
-      <svg xml:space="preserve" viewBox="0 0 122.88 122.25" y="0px" x="0px" id="cookieSvg" version="1.1"><g><path d="M101.77,49.38c2.09,3.1,4.37,5.11,6.86,5.78c2.45,0.66,5.32,0.06,8.7-2.01c1.36-0.84,3.14-0.41,3.97,0.95 c0.28,0.46,0.42,0.96,0.43,1.47c0.13,1.4,0.21,2.82,0.24,4.26c0.03,1.46,0.02,2.91-0.05,4.35h0v0c0,0.13-0.01,0.26-0.03,0.38 c-0.91,16.72-8.47,31.51-20,41.93c-11.55,10.44-27.06,16.49-43.82,15.69v0.01h0c-0.13,0-0.26-0.01-0.38-0.03 c-16
+        <svg xml:space="preserve" viewBox="0 0 122.88 122.25" y="0px" x="0px" id="cookieSvg" version="1.1">
+            <g>
+                <path d="M101.77,49.38c2.09,3.1,4.37,5.11,6.86,5.78c2.45,0.66,5.32,0.06,8.7-2.01c1.36-0.84,3.14-0.41,3.97,0.95 
+                c0.28,0.46,0.42,0.96,0.43,1.47c0.13,1.4,0.21,2.82,0.24,4.26c0.03,1.46,0.02,2.91-0.05,4.35h0v0c0,0.13-0.01,0.26-0.03,0.38 
+                c-0.91,16.72-8.47,31.51-20,41.93c-11.55,10.44-27.06,16.49-43.82,15.69v0.01h0c-0.13,0-0.26-0.01-0.38-0.03 c-16.72-0.91-31.51-8.47-41.93-20C5.31,90.61-0.73,75.1,0.07,58.34H0.07v0c0-0.13,0.01-0.26,0.03-0.38 C1,41.22,8.81,26.35,20.57,15.87C32.34,5.37,48.09-0.73,64.85,0.07V0.07h0c1.6,0,2.89,1.29,2.89,2.89c
